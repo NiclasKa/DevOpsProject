@@ -48,4 +48,4 @@ function connect() {
    });
 }
 // Wait RabbitMQ server to be up
-setTimeout(connect, 15000);
+setTimeout(connect, 20000);
