@@ -24,9 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ORIG
-    - run: ls -la
-    - run: npm ci
+    - run: npm ci && npm test
+      working-directory: ORIG
     - run: npm run test
     - run: cd ..
     - run: cd IMED
