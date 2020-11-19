@@ -26,16 +26,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci && npm test
       working-directory: ORIG
-    - run: npm run test
-    - run: cd ..
-    - run: cd IMED
-    - run: npm ci
-    - run: npm run test
-    - run: cd ..
-    - run: cd OBSE
-    - run: npm ci
-    - run: npm run test
-    - run: cd ..
-    - run: cd HTTPSERV
-    - run: npm ci
-    - run: npm run test
+    - run: npm ci && npm test
+      working-directory: HTTPSERV
+    - run: npm ci && npm test
+      working-directory: IMED
+    - run: npm ci && npm test
+      working-directory: OBSE
